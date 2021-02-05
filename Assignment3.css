@@ -1,0 +1,18 @@
+body{
+    margin:0;
+}
+header{
+    margin:0;
+    height:60px;
+    background: rgb(214,150,59);
+    background: linear-gradient(90deg, rgba(214,150,59,1) 0%, rgba(208,27,27,1) 43%, rgba(123,54,170,1) 100%);
+}
+header div{
+    display: block;
+    margin: auto;
+    font-family: "SegoeUI Regular","Sans","serif";
+    font-size:28px;
+    padding-top: 3px;
+    padding-left: 8px;
+    color: white;
+}
