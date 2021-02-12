@@ -1,18 +1,28 @@
 header{
-    margin:0;
-    height:60px;
-    background: rgb(214,150,59);
-    background: linear-gradient(90deg, rgba(214,150,59,1) 0%, rgba(208,27,27,1) 43%, rgba(123,54,170,1) 100%);
+  margin:0;
+  height:60px;
+  background-color: #2b2b2c;
 }
 
 header div{
-    display: block;
-    margin: auto;
-    font-family: "SegoeUI Regular","Sans","serif";
-    font-size:28px;
-    padding-top: 3px;
-    padding-left: 8px;
-    color: white;
+  display: block;
+  margin: auto;
+  font-family: "SegoeUI Regular","Sans","serif";
+  font-size:28px;
+  padding-top: 3px;
+  padding-left: 8px;
+  color: #d8a0a6;
+}
+#countryName.form-label
+{
+  font-family: 'Exo', sans-serif;
+  font-weight: 900;
+  line-height: 1em;
+  text-transform: uppercase;
+  color:#d8a0a6;
+  margin-top: 50px;
+  padding-left: 30px;
+  
 }
 
 .search-div{
@@ -26,6 +36,7 @@ header div{
 .search-form{
     width:800px;
     margin:auto;
+    padding-left: 149px;
 }
 
 .form-label{
@@ -33,14 +44,14 @@ header div{
 }
 
 #input-country{
-    width:800px;
+    width:437px;
 }
 
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
   color: #333;
-  background-color: #eee;
+  background: #2b2b2c;
 }
 h1 {
   text-align: center;
@@ -65,7 +76,7 @@ h1 {
   margin: 20px auto;
   padding: 5px;
   min-width: 100%;
-  color: #333;
+  color: #d8a0a6;
   font-size: 15px;
   font-weight: 900;
   text-align-last: center;
@@ -73,14 +84,22 @@ h1 {
 #info-container p {
   padding: 0 10px;
   font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  color: #f1e2e4;
+}
+.country-results{
+  font-family: 'Lato', sans-serif;
+  color: #d8a0a6;
+  padding-left:1em;
 }
 #info-container p span {
   font-weight: normal;
+  font-family: 'Lato', sans-serif;
 }
-
 @media (max-width: 768px) {
   body { font-size: 12px; }
   #main-container { width: 342px; }  
   #flag-container { height: 172px; }  
   #info-container select { font-size: 12px; font-weight: 600; }
 }
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
