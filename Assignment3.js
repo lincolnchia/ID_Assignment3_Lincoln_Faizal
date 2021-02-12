@@ -1,6 +1,10 @@
 //     const searchdata = document.getElementById('input-country').value
 //     convertedData = searchdata.replace(/\s/g,"%20")
     // fetch("https://restcountries.eu/rest/v2/name/"+searchdata+"fullText=true")
+document.getElementById("submit-btn").addEventListener('click',function(){
+    findcountries();
+})
+
 function findcountries(){
     fetch("https://restcountries.eu/rest/v2/all")
     .then(res=>res.json())
