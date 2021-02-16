@@ -17,13 +17,17 @@ document.getElementById("input-country").addEventListener("keyup", function(even
 })
 
 function findcountry(input){
+    $(".main-container").empty();
     fetch("https://restcountries.eu/rest/v2/name/"+ input)
     .then(res=>res.json())
     .then(data=>{
         console.log(data)
-        createCard()
-        for(i=0;i<data.length;i++){
-            
+            if (data.message ==  "Not Found"){ 
+                $("#main-container").append("<p style = 'font-size:30px; margin:auto; text-align:center; color:#d8a0a6;'>This country cannot be found!</p>");
+                return;
+            }
+            createCard();
+            for(i=0;i<data.length;i++){
                 $("#flag-container").empty();
                 $("#flag-container").append('<img src="'+ data[i].flag+'">');
                 $("#capital").empty();
@@ -31,15 +35,16 @@ function findcountry(input){
                 $("#dialing-code").empty();
                 $("#dialing-code").append("+" + data[i].callingCodes);
                 $("#timezones").empty();
-                $("#timezones").append(data[i].timezones);
+                $("#timezones").append(data[i].timezones[0]);
                 $("#currencies").empty();
                 $("#currencies").append(data[i].currencies[0].name +" (" + data[i].currencies[0].symbol + ")");
                 $("#region").empty();
                 $("#region").append(data[i].region);
                 $("#amountOfLand").empty();
                 $("#amountOfLand").append(data[i].area);
-            
-        }
+                
+            }
+        
     })
 }
 
