@@ -1,9 +1,9 @@
+createCard()
 // Getting input by presssing button
 document.getElementById("submit-btn").addEventListener('click',function(){
     fullInput = document.getElementById('input-country').value;
     fullInput = fullInputValidation(fullInput);
-    findcountries(fullInput);
-
+    findcountry(fullInput);
 })
 
 // Getting input by pressing enter key
@@ -11,18 +11,19 @@ document.getElementById("input-country").addEventListener("keyup", function(even
     if (event.key === 'Enter') {
         fullInput = document.getElementById('input-country').value;
         fullInput = fullInputValidation(fullInput);
-        findcountries(fullInput);
+        console.log(fullInput);
+        findcountry(fullInput);
     }
 })
 
-function findcountries(fullInput){
+function findcountry(input){
     fetch("https://restcountries.eu/rest/v2/all")
     .then(res=>res.json())
     .then(data=>{
         for(i=0;i<data.length;i++){
-            if(fullInput == data[i].name){
-                $("#flag-container").empty()
-                $("#flag-container").append('<img src="'+ data[i].flag+'">')
+            if(input == data[i].name){
+                $("#flag-container").empty();
+                $("#flag-container").append('<img src="'+ data[i].flag+'">');
                 $("#capital").empty();
                 $("#capital").append(data[i].capital);
                 $("#dialing-code").empty();
@@ -30,7 +31,6 @@ function findcountries(fullInput){
                 $("#timezones").empty();
                 $("#timezones").append(data[i].timezones);
                 $("#currencies").empty();
-                console.log(data);
                 $("#currencies").append(data[i].currencies[0].name +" (" + data[i].currencies[0].symbol + ")");
                 $("#region").empty();
                 $("#region").append(data[i].region);
@@ -39,14 +39,47 @@ function findcountries(fullInput){
             }
         }
     })
-    
+}
+
+function createCard(){
+    cardDiv = document.createElement('div');
+    cardDiv.classList.add('card-container');
+    cardDiv.id = 'card-container';
+    $(".main-container").append(cardDiv);
+    flagDiv = document.createElement('div');
+    flagDiv.classList.add('flag-container');
+    flagDiv.id = 'flag-container';
+    $(".card-container").append(flagDiv);
+    infoDiv = document.createElement('div');
+    infoDiv.classList.add('info-container');
+    infoDiv.id = 'info-container';
+    infoDiv.innerHTML = "\
+    <h3> Capital : "+"<div class = \"country-results\" id=\"capital\"></div>"+"</h3>\
+    <h3> Dialing Code :"+"<div class = \"country-results\" id=\"dialing-code\"></div>"+"</h3>\
+    <h3> TimeZone: "+"<div class = \"country-results\" id=\"timezones\"></div>"+"</h3>\
+    <h3> Currencies: "+"<div class = \"country-results\" id=\"currencies\"></div>"+"</h3>\
+    <h3> Region: "+"<div class = \"country-results\" id=\"region\"></div>"+"</h3>\
+    <h3> Land space: "+"<div class = \"country-results\" id=\"amountOfLand\"></div>"+"</h3>\
+    ";
+    $(".card-container").append(infoDiv);
 }
 
 // Making input Capitalized and lowercased properly
-function fullInputValidation(fullInput){
-    fullInput = fullInput.toLowerCase();
-    fullInput = fullInput.charAt(0).toUpperCase() + fullInput.slice(1);
-    return fullInput;
+function fullInputValidation(Input){
+    if (Input.split(" ").length > 1) {
+        var [a, b] = Input.split(" ");
+        a = a.toLowerCase();
+        a = a.charAt(0).toUpperCase() + a.slice(1);
+        b = b.toLowerCase();
+        b = b.charAt(0).toUpperCase() + b.slice(1);
+        return a +" "+ b;
+    }
+    
+    else{
+        Input = Input.toLowerCase();
+        Input = Input.charAt(0).toUpperCase() + Input.slice(1);
+        return Input;
+    }
 }
 
 
