@@ -1,4 +1,4 @@
-createCard()
+
 // Getting input by presssing button
 document.getElementById("submit-btn").addEventListener('click',function(){
     fullInput = document.getElementById('input-country').value;
@@ -17,11 +17,13 @@ document.getElementById("input-country").addEventListener("keyup", function(even
 })
 
 function findcountry(input){
-    fetch("https://restcountries.eu/rest/v2/all")
+    fetch("https://restcountries.eu/rest/v2/name/"+ input)
     .then(res=>res.json())
     .then(data=>{
+        console.log(data)
+        createCard()
         for(i=0;i<data.length;i++){
-            if(input == data[i].name){
+            
                 $("#flag-container").empty();
                 $("#flag-container").append('<img src="'+ data[i].flag+'">');
                 $("#capital").empty();
@@ -36,7 +38,7 @@ function findcountry(input){
                 $("#region").append(data[i].region);
                 $("#amountOfLand").empty();
                 $("#amountOfLand").append(data[i].area);
-            }
+            
         }
     })
 }
@@ -67,6 +69,7 @@ function createCard(){
 // Making input Capitalized and lowercased properly
 function fullInputValidation(Input){
     if (Input.split(" ").length > 1) {
+        for(i=0;i<Input.split(" ").length;i++)
         var [a, b] = Input.split(" ");
         a = a.toLowerCase();
         a = a.charAt(0).toUpperCase() + a.slice(1);
