@@ -1,7 +1,47 @@
 header{
 margin:0;
 height:100px;
-background-color: #1f1e1ede;
+}
+
+.header-container{
+  width:900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topnav{
+  grid-template-areas: "logo menu config";
+  line-height: 2.3rem;
+  font-size: 2.3rem;
+  transition: .25s;
+  padding: 0 5px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr auto;
+  z-index: 2;
+  align-items: center;
+  gap: .5rem;
+}
+
+.logo{
+  position: relative;
+  font-family: 'Oxygen', sans-serif ;
+  display:block;
+  padding-right: 150px;
+}
+.top{
+  font-size: 1.3rem;
+  line-height: .65rem;
+  margin-bottom: -.0.9rem;
+  margin-left: -.1rem;
+  color: #76689a;
+  
+}
+
+.bottom{
+  font-size: 40px;
+  color: #d8a0a6;
+  margin-left: -.15rem;
 }
 #website-name{
 position: relative;
@@ -20,30 +60,39 @@ flex-direction: row;
 align-items: start;
 list-style-type: none;
 padding-top:25px;
+padding-left:80px 0px;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+padding-inline-start: 40px;
 }
 
 li {
-padding: 0px 10px;
+padding: 0px 13px;
+flex-direction: row;
+flex-wrap: nowrap;
+display: flex;
 }
 
 a {
 position: relative;
-display: block;
+display: flex;
 padding: 4px 0;
 font-family: "SegoeUI Regular","Sans","serif";
 color: #d8a0a6;
 text-decoration: none;
 text-transform: uppercase;
 transition: 0.5s;
-font-size:28px;
+font-size:18px;
 }
 
-:hover::after {
+.items-nav :hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-header a:after {
+.items-nav a:after {
   position: absolute;
   content: "";
   top: 100%;
@@ -57,7 +106,7 @@ header a:after {
   color:#fff
 }
 
-header a:hover {
+.items-nav a:hover {
   color: #ffffff;
 }
 
@@ -70,13 +119,14 @@ color: #d8a0a6;
 
 #countryName.form-label
 {
-font-family: 'Exo', sans-serif;
+font-family: 'Raleway', sans-serif;
 font-weight: 900;
 line-height: 1em;
 text-transform: uppercase;
 color:#d8a0a6;
 margin-top: 50px;
 text-align: center;
+font-size: 18px;
 }
 
 .search-div{
@@ -90,13 +140,59 @@ text-align: center;
 .search-form{
   margin:auto;
 }
-
-
-
-#input-country{
-  width:437px;
+.searchbar{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#submit-btn{
+  margin-top: 11px;
+}
+::placeholder {
+  color: color(#797979 a(0.8));
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
+#input-country{
+  color:#f8f9fa;
+  width:437px;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 1px solid #575756;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  margin: 20px 0px;
+}
+
+#input-country:hover,:focus {
+padding: 12px 0;
+outline: 0;
+border: 1px solid transparent;
+border-bottom: 1px solid #575756;
+border-radius: 0;
+background-position: 100% center;
+}
+
+#scroll-down{
+font-family: 'Raleway', sans-serif;
+font-weight: 900;
+line-height: 1em;
+text-transform: uppercase;
+color:#d8a0a6;
+text-align: center;
+font-size: 18px;
+}
 body {
 font-family: Helvetica, Arial, sans-serif;
 font-size: 15px;
@@ -104,6 +200,13 @@ color: #333;
 background: #2b2b2c;
 }
 
+.bigBackground{
+  display:flex;
+  justify-content: center;
+}
+.background{
+  position: relative;
+}
 .page{
 display: flex;
 flex-direction: row;
@@ -185,3 +288,5 @@ body { font-size: 12px; }
 .info-container select { font-size: 12px; font-weight: 600; }
 }
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
