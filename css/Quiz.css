@@ -1,7 +1,118 @@
-body {
-	color: #5d5d5d;
-	font-family: Helvetica, Arial, sans-serif;
+header{
+margin:0;
+height:100px;
 }
+
+.header-container{
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.topnav{
+	grid-template-areas: "logo menu config";
+	line-height: 2.3rem;
+	font-size: 2.3rem;
+	transition: .25s;
+	padding: 0 5px;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: auto 1fr auto;
+	z-index: 2;
+	align-items: center;
+	gap: .5rem;
+}
+
+.logo{
+	position: relative;
+	font-family: 'Oxygen', sans-serif ;
+	display:block;
+	padding-right: 150px;
+}
+.top{
+	font-size: 1.3rem;
+	line-height: .65rem;
+	margin-bottom: -.0.9rem;
+	margin-left: -.1rem;
+	color: #76689a;
+	
+}
+
+.bottom{
+	font-size: 40px;
+	color: #d8a0a6;
+	margin-left: -.15rem;
+}
+#website-name{
+position: relative;
+display: block;
+padding-top:0px;
+font-family: "SegoeUI Regular","Sans","serif";
+color: #d8a0a6;
+text-decoration: none;
+text-transform: uppercase;
+font-size:50px;
+}
+
+ul {
+display: flex;
+flex-direction: row;
+align-items: start;
+list-style-type: none;
+padding-top:25px;
+}
+
+li {
+padding: 0px 10px;
+}
+
+a {
+position: relative;
+display: block;
+padding: 4px 0;
+font-family: "SegoeUI Regular","Sans","serif";
+color: #d8a0a6;
+text-decoration: none;
+text-transform: uppercase;
+transition: 0.5s;
+font-size:18px;
+}
+
+:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+header a:after {
+	position: absolute;
+	content: "";
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: #ffffff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.5s;
+	color:#fff
+}
+
+header a:hover {
+	color: #ffffff;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	background: #2b2b2c;
+}
+
+.page{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	min-height: 1200px;
+	}
 
 h1 {
 	font-size: 30px;
@@ -10,8 +121,9 @@ h1 {
 }
 
 .container {
-	max-width: 800px;
+	max-width: 1000px;
 	margin: auto;
+	margin-top: 100px;
 }
 
 .myText {
@@ -34,7 +146,6 @@ h1 {
 .mapael .mapTooltip {
 	position: absolute;
 	background-color: #fff;
-	moz-opacity: 0.70;
 	opacity: 0.70;
 	filter: alpha(opacity=70);
 	border-radius: 10px;
