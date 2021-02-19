@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>ID_Assingment 3</title>
-    
+    <link rel="icon" href="images/favicon-16x16.png" sizes="32x32">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="css/Assignment3.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
@@ -25,7 +25,7 @@
           <ul class="items-nav">
             <li><a href="Quiz.html">Quiz</a></li>
             <li><a href="#">Leaderboards<i style="margin-left:8px;margin-top: 6px" class="fas fa-fw fa-crown"></i></a></li>
-            <li><a href="#">Contact us </a></li>
+            <li><a href="#">Contact us <i  style="margin-left: 2px ;margin-top: 7px" class="fas fa-fw fa-info"></i> </a></li>
             <li><button class="login-icon" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="color:aliceblue"><lottie-player src="/Js/lf30_editor_u0dqaf1d.json" background="transparent"  speed="1"  style="width: 28px; height: 30px;" hover></lottie-player></a></li></button>
           </ul>
         </div>
@@ -60,14 +60,40 @@
               <input type="text" placeholder="E-mail" name="email" required>
               <input type="password" placeholder="Password" name="psw" required>
               <button class="login-submit" type="submit">Log-in</button>
-              <a href="Quiz.html  "class="move-register">Register with us!</a>
+              <a href="Quiz.html "class="move-register">Register with us!</a>
             </div>
-          <div class="container">
+          <div class="modal-container">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
           </div>
         </div>
       </form>
     </div>
+    <footer>
+      <div class="leftright">
+        <div class="left">
+          <div class="bottom-items">
+            <i class="far fa-fw fa-heart"></i> Created by Lincoln and Faizal
+          </div>
+          <div class="bottom-items">
+            <i class="fas fa-fw fa-code"></i></i> Made with Github
+          </div>
+          <div class="bottom-items" id="discordLink-item">
+            <i class="fab fa-fw fa-discord"></i> Join our
+            <div><a href="https://discord.gg/7CAczem6Au" class="discordLink">Discord server</a></div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="bottom-items">
+            <i class="fas fa-palette"></i> Mashu
+          </div>
+          <div class="bottom-items">
+            <i class="fas fa-code-branch"></i> Created with Country Api
+          </div>
+          <div class="bottom-items">
+          </div>
+        </div>
+      </div>
+    </footer>
       <!-- adding of scripts -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
@@ -75,7 +101,7 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
-      <script src="Js/Assignment3.js"></script>
+      <script src="Js/index.js"></script>
       <!-- end of adding of scripts -->
   </body>
 </html>

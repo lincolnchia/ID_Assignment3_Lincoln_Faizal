@@ -1,5 +1,8 @@
 var modal = document.getElementById('id01');
-
+window.onunload = () => {
+    // Clear the local storage
+    window.MyStorage.clear()
+ }
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -37,7 +40,6 @@ $(function () {
                     click: function(e, id, mapElem, textElem) { 
                         makingquestion1(id);
                         localStorage.setItem("countriesId", id)
-
                     }
                 }
             },
