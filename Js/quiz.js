@@ -9,16 +9,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-function HideQuiz() {
-    var x = document.getElementById("quiz-lottie");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } 
-    else {
-      x.style.display = "none";
-    }
-}
-  
 
 $(function () {
     $(".container").mapael({
