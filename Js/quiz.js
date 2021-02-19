@@ -1,3 +1,22 @@
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function HideQuiz() {
+    var x = document.getElementById("quiz-lottie");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } 
+    else {
+      x.style.display = "none";
+    }
+}
+  
+
 $(function () {
     $(".container").mapael({
         map: {
@@ -9,12 +28,18 @@ $(function () {
                 attrs: {
                     fill:"#76689a",
                     stroke: "#fff",
-                    "stroke-width": 1
+                    "stroke-width": 1,
                 },
                 attrsHover: {
                     fill:"#d8a0a6"
+                },
+                eventHandlers: {
+                    dblclick: function(e, id, mapElem, textElem) { 
+                        makingquestions(id);
+                    }
                 }
             },
+            
         },
         
         areas: {
@@ -1388,4 +1413,3 @@ $(function () {
         }
     });
 });
-console.log("hi")
