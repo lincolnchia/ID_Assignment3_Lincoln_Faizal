@@ -169,3 +169,7 @@ function wrongPage(){
     });
 }
     
+function contactFunction() {
+    var elmnt = document.getElementById("leftright");
+    elmnt.scrollIntoView();
+}
