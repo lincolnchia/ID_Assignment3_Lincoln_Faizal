@@ -36,6 +36,8 @@ $(function () {
                 eventHandlers: {
                     click: function(e, id, mapElem, textElem) { 
                         makingquestion1(id);
+                        localStorage.setItem("countriesId", id)
+
                     }
                 }
             },
