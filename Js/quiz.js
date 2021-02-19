@@ -34,8 +34,8 @@ $(function () {
                     fill:"#d8a0a6"
                 },
                 eventHandlers: {
-                    dblclick: function(e, id, mapElem, textElem) { 
-                        makingquestions(id);
+                    click: function(e, id, mapElem, textElem) { 
+                        makingquestion1(id);
                     }
                 }
             },

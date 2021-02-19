@@ -207,19 +207,24 @@ key{
 .question-box{
 	display:flex;
 	flex-direction: column;
-	width:50%;
+	width:40%;
 	height:400px;
 	margin:auto;
 	background: #19191a;
 	border-radius: 30px;
 }
 .question-input{
-	display: block;
-	height: 30px;
-	position: absolute;
-	width: 40% !important;
-	bottom: 0;
-	margin-left: 60px;
+	margin:0 auto;
+	margin-top: 20px;
+	width:80% !important;
+}
+.user-submit-btn{
+	width: 80%;
+	border-radius: 4px;
+	color: #343434;
+	background-color: #76689a;
+	margin: 0 auto;
+	margin-top: 20px;
 }
 
 button {
@@ -232,14 +237,25 @@ cursor: pointer;
 width: 100%;
 }
 
-.quiz-lottie{
-
+.question-name{
+	color:#d8a0a6;
+	font-size: 20px;
+	margin:0 auto;
+	margin-top: 10px;
+	text-align: center;
 }
+.question-flag{
+	width:300px;
+	height:200px;
+	margin:0 auto;
+}
+
+
 .cancelbtn {
-	width: 100%;
-  padding: 8px 16px;
-  background-color: #e65247c2;
-  border-radius: 4px;
+	width: 250px;
+	padding: 4px 16px;
+	background-color: #e65247c2;
+	border-radius: 4px;
 }
 
 .login-submit{
