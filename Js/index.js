@@ -7,6 +7,21 @@ window.onclick = function(event) {
 }
 
 // Getting input by presssing button
+document.getElementById("submit-btn").addEventListener('click',function(){
+    fullInput = document.getElementById('input-country').value;
+    fullInput = fullInputValidation(fullInput);
+    findcountry(fullInput);
+})
+
+// Getting input by pressing enter key
+document.getElementById("input-country").addEventListener("keyup", function(event){
+    if (event.key === 'Enter') {
+        fullInput = document.getElementById('input-country').value;
+        fullInput = fullInputValidation(fullInput);
+        console.log(fullInput);
+        findcountry(fullInput);
+    }
+})
 
 window.onunload = () => {
     // Clear the local storage
